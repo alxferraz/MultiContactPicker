@@ -104,18 +104,18 @@ public class MultiContactPickerActivity extends AppCompatActivity implements Mat
             }
         });
 
-        tvSelectAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                allSelected = !allSelected;
-                if(adapter != null)
-                    adapter.setAllSelected(allSelected);
-                if(allSelected)
-                    tvSelectAll.setText(getString(R.string.tv_unselect_all_btn_text));
-                else
-                    tvSelectAll.setText(getString(R.string.tv_select_all_btn_text));
-            }
-        });
+        // tvSelectAll.setOnClickListener(new View.OnClickListener() {
+        //     @Override
+        //     public void onClick(View view) {
+        //         allSelected = !allSelected;
+        //         if(adapter != null)
+        //             adapter.setAllSelected(allSelected);
+        //         if(allSelected)
+        //             tvSelectAll.setText(getString(R.string.tv_unselect_all_btn_text));
+        //         else
+        //             tvSelectAll.setText(getString(R.string.tv_select_all_btn_text));
+        //     }
+        // });
 
     }
 
@@ -144,17 +144,17 @@ public class MultiContactPickerActivity extends AppCompatActivity implements Mat
         }else{
             controlPanel.setVisibility(View.VISIBLE);
         }
-        
+
         if (builder.titleText != null) {
             setTitle(builder.titleText);
         }
-        
-        
+
+
         if (builder.completionText != null) {
             tvSelectBtn.setText(builder.completionText);
         }
-        
-        
+
+
         if (builder.selectionText != null) {
             tvSelectAll.setText(builder.selectionText);
         }
