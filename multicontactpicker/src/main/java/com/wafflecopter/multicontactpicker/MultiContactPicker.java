@@ -92,17 +92,24 @@ public class MultiContactPicker {
             this.titleText = titleText;
             return this;
         }
-      
+
         public Builder setCompletionText(String completionText){
             this.completionText = completionText;
             return this;
         }
-        
+
         public Builder setSelectionText(String selectionText){
             this.selectionText = selectionText;
             return this;
         }
-        
+
+        public Intent MultiContactPickerIntent(){
+          Intent intent = new Intent(acc, MultiContactPickerActivity.class);
+          intent.putExtra("builder", this);
+          return intent;
+
+        }
+
         public void showPickerForResult(int requestCode) {
             if (acc != null) {
                 Intent intent = new Intent(acc, MultiContactPickerActivity.class);
