@@ -124,6 +124,12 @@ public class MultiContactPicker {
             return this;
         }
 
+        public Intent MultiContactPickerIntent(){
+          Intent intent = new Intent(acc, MultiContactPickerActivity.class);
+          intent.putExtra("builder", this);
+          return intent;
+
+        }
         
         public void showPickerForResult(int requestCode) {
             if (acc != null) {
