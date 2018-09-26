@@ -103,6 +103,25 @@ public class MultiContactPicker {
             return this;
         }
 
+<<<<<<< HEAD
+        public Builder setCompletionText(String completionText){
+            this.completionText = completionText;
+            return this;
+        }
+
+        public Builder setSelectionText(String selectionText){
+            this.selectionText = selectionText;
+            return this;
+        }
+
+        public Intent MultiContactPickerIntent(){
+          Intent intent = new Intent(acc, MultiContactPickerActivity.class);
+          intent.putExtra("builder", this);
+          return intent;
+
+        }
+
+=======
         public Builder limitToColumn(LimitColumn limitedColumn){
             this.columnLimit = limitedColumn;
             return this;
@@ -125,6 +144,7 @@ public class MultiContactPicker {
         }
 
         
+>>>>>>> upstream/master
         public void showPickerForResult(int requestCode) {
             if (acc != null) {
                 Intent intent = new Intent(acc, MultiContactPickerActivity.class);

@@ -104,18 +104,18 @@ public class MultiContactPickerActivity extends AppCompatActivity implements Mat
             }
         });
 
-        tvSelectAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                allSelected = !allSelected;
-                if(adapter != null)
-                    adapter.setAllSelected(allSelected);
-                if(allSelected)
-                    tvSelectAll.setText(getString(R.string.tv_unselect_all_btn_text));
-                else
-                    tvSelectAll.setText(getString(R.string.tv_select_all_btn_text));
-            }
-        });
+        // tvSelectAll.setOnClickListener(new View.OnClickListener() {
+        //     @Override
+        //     public void onClick(View view) {
+        //         allSelected = !allSelected;
+        //         if(adapter != null)
+        //             adapter.setAllSelected(allSelected);
+        //         if(allSelected)
+        //             tvSelectAll.setText(getString(R.string.tv_unselect_all_btn_text));
+        //         else
+        //             tvSelectAll.setText(getString(R.string.tv_select_all_btn_text));
+        //     }
+        // });
 
     }
 
@@ -154,14 +154,29 @@ public class MultiContactPickerActivity extends AppCompatActivity implements Mat
             controlPanel.setVisibility(View.VISIBLE);
         }
 
+<<<<<<< HEAD
+=======
         if(builder.selectionMode == MultiContactPicker.CHOICE_MODE_SINGLE && builder.selectedItems.size() > 0){
             throw new RuntimeException("You must be using MultiContactPicker.CHOICE_MODE_MULTIPLE in order to use setSelectedContacts()");
         }
         
+>>>>>>> upstream/master
         if (builder.titleText != null) {
             setTitle(builder.titleText);
         }
 
+<<<<<<< HEAD
+
+        if (builder.completionText != null) {
+            tvSelectBtn.setText(builder.completionText);
+        }
+
+
+        if (builder.selectionText != null) {
+            tvSelectAll.setText(builder.selectionText);
+        }
+=======
+>>>>>>> upstream/master
     }
 
     @Override
